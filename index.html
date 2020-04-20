@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="puzzle"></div>
-    <div id="guesses"></div>
-    <script src="hangman.js"></script>
-    <script src="app.js"></script>
+    <div class="container">
+        <h1 id="heading" class="item">Hangman</h1>
+        <div id="puzzle" class="item"></div>
+        <div id="guesses" class="item"></div>
+        <button id="reset" class="item">Reset</button>
+    </div>
+
+
+<script src="requests.js"></script>
+<script src="hangman.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>

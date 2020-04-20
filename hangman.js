@@ -4,9 +4,9 @@ class Hangman {
     this.remainingGuesses = remainingGuesses
     this.guessedLetters = []
     }
-    getPuzzle() {
+    get getPuzzle() {
         let puzzle = ''
-        this.word.forEach(letter => this.guessedLetters.includes(letter) || letter === ' '  ? puzzle += letter : puzzle += '*')
+        this.word.forEach(letter => this.guessedLetters.includes(letter) || letter === ' '  ? puzzle += letter : puzzle += '_')
         return puzzle
     }
     makeGuess(guess) {
@@ -43,7 +43,7 @@ class Hangman {
             return 'playing'
         }
     }
-    statusMessage() {
+    get statusMessage() {
         switch(this.getStatus()) {
             case 'playing':
                 return `Guesses left: ${this.remainingGuesses}`
